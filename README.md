@@ -51,14 +51,9 @@ This project builds and compares four classification models to predict loan appr
 ## Project Structure
 
 ```
-aibank/
-├── data/                # raw and processed dataset (or a note on where to get it)
-├── notebooks/           # Jupyter notebooks for exploration and experiments
-├── src/                 # preprocessing and model training scripts
-│   ├── preprocessing.py
-│   ├── train_models.py
-│   └── evaluate.py
-├── results/             # saved metrics, plots, confusion matrices
+Ai_bank/
+├── bank.py                  # full pipeline: preprocessing, training, evaluation
+├── loan_dataset_20000.csv   # dataset (20,000 records)
 ├── requirements.txt
 └── README.md
 ```
@@ -67,8 +62,8 @@ aibank/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/aibank.git
-cd aibank
+git clone https://github.com/zigzagjimbo/Ai_bank.git
+cd Ai_bank
 
 # 2. Create a virtual environment (optional but recommended)
 python -m venv venv
@@ -78,7 +73,7 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 
 # 4. Run the pipeline
-python src/train_models.py
+python bank.py
 ```
 
 ## Tech Stack
